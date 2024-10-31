@@ -8,13 +8,15 @@ public sealed class NoteEditWindow : Window {
     public NoteEditWindow(Note? editNote = null) {
         var note = editNote ?? Modes.NotesController.CreateNote();
         Title = note.Path;
+        ColorScheme = Colors.TopLevel;
 
         var hintHotKeySave = new Label("Ctrl+S: Save Note | Ctrl+Q: Quit (auto save if note is not empty)");
         NoteField = new TextView {
             Text = note.Text,
             Y = Pos.Bottom(hintHotKeySave),
             Width = Dim.Fill(),
-            Height = Dim.Fill()
+            Height = Dim.Fill(),
+            ColorScheme = Colors.Dialog,
         };
         KeyDown += args => {
             var e = args.KeyEvent;

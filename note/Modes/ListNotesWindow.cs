@@ -71,7 +71,7 @@ public sealed class ListNotesWindow : Window {
     }
 
     private void SearchFieldOnTextChanged(ustring searchText) {
-        var text = searchText.ToString();
+        var text = SearchField.Text.ToString();
         if (string.IsNullOrWhiteSpace(text)) {
             ListNotes.SetSourceAsync(Modes.NotesController.Notes.ToList());
             return;
