@@ -1,0 +1,52 @@
+{
+  "$schema": "https://gui-cs.github.io/Terminal.Gui/schemas/tui-config-schema.json",
+  "Application.QuitKey": {
+    "Key": "Esc"
+  },
+  "AppSettings": {
+    "UICatalog.StatusBar": false
+  },
+  "Theme": "UI Catalog Theme",
+  "Themes": [
+    {
+      "UI Catalog Theme": {
+        "ColorSchemes": [
+          {
+            "UI Catalog Scheme": {
+              "Normal": {
+                "Foreground": "White",
+                "Background": "Green"
+              },
+              "Focus": {
+                "Foreground": "Green",
+                "Background": "White"
+              },
+              "HotNormal": {
+                "Foreground": "Blue",
+                "Background": "Green"
+              },
+              "HotFocus": {
+                "Foreground": "BrightRed",
+                "Background": "White"
+              },
+              "Disabled": {
+                "Foreground": "BrightGreen",
+                "Background": "Gray"
+              }
+            }
+          },
+          {
+            "TopLevel": {
+              "Normal": {
+                "Foreground": "DarkGray",
+                "Background": "White"
+              ...
+              }
+            }
+          }
+        ],
+        "Dialog.DefaultEffect3D": false
+      }
+    }
+  ]
+}
