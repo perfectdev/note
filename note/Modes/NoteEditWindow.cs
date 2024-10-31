@@ -17,6 +17,7 @@ public sealed class NoteEditWindow : Window {
             Width = Dim.Fill(),
             Height = Dim.Fill(),
             ColorScheme = Colors.Dialog,
+            WordWrap = true
         };
         KeyDown += args => {
             var e = args.KeyEvent;

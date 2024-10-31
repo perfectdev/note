@@ -58,7 +58,8 @@ public sealed class ListNotesWindow : Window {
             Y = Pos.Bottom(NoteEditTitle),
             ColorScheme = Colors.Dialog,
             Width = Dim.Fill(),
-            Height = Dim.Fill()
+            Height = Dim.Fill(),
+            WordWrap = true
         };
         textFrame.Add([NoteEditTitle, NoteField]);
         ListNotes.SetSourceAsync(Modes.NotesController.Notes);
