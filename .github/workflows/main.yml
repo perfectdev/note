@@ -1,0 +1,31 @@
+name: Manual version update
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "New version for the project"
+        required: true 
+        type: string
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    name: Update version
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Set MyProject.csproj version
+        id: update
+        uses: vers-one/dotnet-project-version-updater@v1.6
+        with:
+          file: "note/note.csproj"
+          version: ${{ github.event.inputs.version }}
+
+      - run: |
+          git config user.name "damdev"
+          git config user.email "devolap@gmail.com"
+          git add .
+          git commit -m "Update project version to ${{ steps.update.outputs.newVersion }}"
+          git push
