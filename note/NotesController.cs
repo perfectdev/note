@@ -47,6 +47,7 @@ public class NotesController {
 
     public void DeleteNote(Note note) {
         if (File.Exists(note.Path))
-            File.Exists(note.Path);
+            File.Delete(note.Path);
+        Notes.Remove(note);
     }
 }
