@@ -1,4 +1,4 @@
-name: Manual version update
+ctdevname: Manual version update
 
 on:
   workflow_dispatch:
@@ -24,7 +24,7 @@ jobs:
           version: ${{ github.event.inputs.version }}
 
       - run: |
-          git config user.name "damdev"
+          git config user.name "perfectdev"
           git config user.email "devolap@gmail.com"
           git add .
           git commit -m "Update project version to ${{ steps.update.outputs.newVersion }}"
