@@ -1,4 +1,4 @@
-ctdevname: Manual version update
+name: Manual version update
 
 on:
   workflow_dispatch:
@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Set MyProject.csproj version
+      - name: Set note.csproj version
         id: update
         uses: vers-one/dotnet-project-version-updater@v1.6
         with:
